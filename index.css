@@ -1,0 +1,623 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background-color: rgb(17, 17, 27);
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+    background-color: rgb(2, 2, 2);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 0px 50px 0px 80px;
+}
+
+nav .logo {
+    font-size: 25px;
+    padding: 0 50px;
+    font-weight: 600;
+
+}
+
+nav ul {
+    display: flex;
+
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 50px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 17px;
+    padding: 5px 8px;
+    border-radius: 3px;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+a.active,
+a:hover {
+    text-decoration: underline rgb(220, 60, 60);
+    text-underline-offset: 0.5rem;
+
+}
+
+nav .menu-btn i {
+    color: #f7f3f3;
+    font-size: 25px;
+    line-height: 80px;
+    margin-right: 40px;
+    float: right;
+    cursor: pointer;
+    display: none;
+
+}
+
+#click {
+    display: none;
+}
+
+@media(max-width:940px) {
+    nav .logo {
+        margin: 0px 10px 0px 0px;
+        padding: 0px 0px 0px 0px;
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    nav .menu-btn i {
+        display: block;
+    }
+
+    #click:checked~.menu-btn i:before {
+        content: "\f00d";
+
+    }
+
+    nav ul {
+        position: fixed;
+        top: 80px;
+        right: -100%;
+        background: #383839;
+        height: 80vh;
+        width: 50%;
+        display: block;
+        text-align: center;
+        transition: all 0.6s ease;
+    }
+
+    #click:checked~ul {
+        right: 0%;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        display: block;
+    }
+
+    nav ul li a {
+        font-size: 15px;
+
+    }
+
+    nav .menu-btn i {
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+        display: block;
+    }
+}
+
+.man {
+    margin: 120px 0px 0px 50px;
+    
+    
+    
+}
+
+.name {
+    font-size: 33px;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.role .text{
+    font-size: 35px;
+    font-weight: 600;
+    margin-top: 7px;
+    margin-left: 20px;
+}
+
+.mini-bio {
+    letter-spacing: 1px;
+    font-size: 17px;
+    margin-top: 5px;
+    margin-right: 20px;
+    padding-bottom: 5px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+
+#resume a{
+    cursor: pointer;
+    padding: 5px 8px 5px 10px;
+    margin-left: 20px;
+    border-radius: 3px;
+    font-size: 17px;
+    color: rgb(246, 61, 61);
+    border: 1px solid white;
+}
+
+#resume a:hover{
+    background-color: rgb(66, 66, 251);
+    color: #f7f3f3;
+    transition: all 0.3s ease-out;
+}
+
+.social-handle {
+    display: flex;
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+.linkdn a img {
+    width: 50px;
+    margin-right: 20px;
+    background-color: #f7f3f3;
+    border-color: white;
+    border-radius: 2px;
+
+}
+
+.linkdn a img:hover {
+    background-color: rgb(66, 66, 251);
+    transition: all 0.2s ease-in;
+    border-radius: 6px;
+}
+
+.git a img {
+    width: 50px;
+    background-color: #f7f3f3;
+    border-radius: 2px;
+    margin-right: 20px;
+
+}
+
+.git a img:hover {
+    background-color: rgb(66, 66, 251);
+    transition: all 0.3s ease-in;
+    border-radius: 6px;
+}
+
+.gmail a img {
+    width: 50px;
+    background-color: #f7f3f3;
+    border-radius: 2px;
+}
+
+.gmail a img:hover{
+    background-color: rgb(66, 66, 251);
+    border-radius: 6px;
+    transition: all.3s ease-in;
+    
+}
+
+.hero2 div img{
+    margin: 0px 50px 20px 0px;
+    width: 350px;
+    height: 350px;
+    border-radius: 5px;
+}
+
+.hero2 div{
+    float: right;
+}
+
+@media(max-width:920px){
+
+    #main{
+        flex-direction: column;
+     }
+
+    .hero2 div img{
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        border: 1px solid cyan;
+        
+    }
+    .hero2 {
+        display: flex;
+        justify-content: center;
+    }
+
+    .hero .name p{
+        text-align: center;
+        font-size: 26px;
+    }
+
+    .role .text{
+        text-align: center;
+        font-size: 20px;
+        
+    }
+
+    .mini-bio p{
+        
+        font-size: 15px;
+    }
+    
+    #resume{
+        text-align: center;
+    }
+
+    .social-handle{
+        justify-content: center;
+    }
+    
+
+
+}
+
+.about-me{
+    margin-top: 100px;
+    margin-left: 40px;
+}
+
+.about-head{
+    margin: 50px 0px 30px 0px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    text-decoration: underline rgb(243, 62, 62);
+    text-underline-offset: 0.5rem;
+
+}
+
+.about{
+    letter-spacing: 1px;
+    margin-right: 35px;
+    
+    
+}
+
+.skill{
+   margin-top: 80px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   
+}
+
+.skill-head{
+    margin: 50px 0px 30px 0px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    text-decoration: underline rgb(243, 62, 62);
+    text-underline-offset: 0.5rem;
+    letter-spacing: 1px;
+}
+
+.tech-stack{
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+   gap: 10px;
+   margin: 20px;
+   
+   width: 80%;
+ 
+} 
+
+.card div img{
+    width: 100px;
+    border-radius: 5px;
+}
+
+.card{
+    
+    height: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: rgba(113, 112, 112, 0.16) 0px 1px 4px;
+}
+
+.card:hover{
+    box-shadow: rgba(5, 167, 242, 0.919) 0px 1px 4px;
+    transition: all 0.4s linear;
+}
+
+@media(max-width:920px){
+    .tech-stack{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 10px;
+        margin: 20px;
+        width: 80%;
+      
+     } 
+
+}
+
+.card-text{
+    font-size: 20px;
+    padding: 5px;
+    font-weight: 500;
+   
+}
+
+.project-head p{
+    margin: 50px 0px 30px 0px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    text-decoration: underline rgb(243, 62, 62);
+    text-underline-offset: 0.5rem;
+    letter-spacing: 1px;
+}
+
+.project{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+    align-items: center;
+    
+    width: 80%;
+    margin: auto;
+    gap: 15px;
+    
+}
+.p-card{
+    width: 400px;
+    height: 470px;
+    margin-bottom: 15px;
+    text-align: center;
+    padding: 10px;
+    background-color: #0c0a10;
+    border-radius: 5px;
+}
+
+.p-card:hover{
+    cursor: pointer;
+    box-shadow: rgba(5, 167, 250, 0.919) 0px 1px 4px;
+    transition: all 0.4s ease-in;
+}
+.p-card .image{
+    
+    width: 90%;
+    margin: auto;
+    border-radius: 5px;
+}
+.p-card img{
+    width: 100%;
+    
+}
+
+.p1{
+    padding-top: 10px;
+    color: blue;
+    font-size: 27px;
+    font-weight: 600;
+    padding-bottom: 10px;
+}
+
+.p2{
+    font-size: 17px;
+    padding-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    letter-spacing: 1px;
+}
+
+.p3{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.btn-parent{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.btn-parent div button a{
+    padding: 5px 10px 5px 10px;
+    border-radius: 3px ;
+    border-style: none;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    color: #0c0a10;
+    
+}
+.btn-parent div button a:hover{
+    background-color: rgb(43, 43, 233);
+    transition: all 0.3s ease-in-out;
+    color: white;
+}
+
+@media(max-width:920px){
+    .project{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        justify-content: center;
+        align-items: center;
+        
+        width: 50%;
+        margin: auto;
+        gap: 10px;
+        
+    }
+
+    .p-card{
+        width: 300px;
+        height: 420px;
+        margin-bottom: 15px;
+        text-align: center;
+        padding: 10px;
+        
+        background-color: #0c0a10;
+        border-radius: 5px;
+    
+    }
+
+    .p1{
+        padding-top: 10px;
+        color: blue;
+        font-size: 20px;
+        font-weight: 600;
+        padding-bottom: 10px;
+    }
+    
+    .p2{
+        font-size: 13px;
+        padding-bottom: 10px;
+        margin-left: 5px;
+        margin-right: 5px;
+        letter-spacing: 1px;
+    }
+    
+    .p3{
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+
+}
+
+.day-code{
+    margin-top: 100px;
+    text-align: center;
+}
+
+.git-head{
+    margin: 50px 0px 30px 0px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    text-decoration: underline rgb(243, 62, 62);
+    text-underline-offset: 0.5rem;
+    letter-spacing: 1px;
+}
+
+.gitcard img{
+    width: 85%;
+}
+
+.git-report{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.lang img{
+    width: 420px;
+}
+
+.gitstats img{
+    width: 400px;
+}
+
+@media(max-width:920px){
+    .git-report{
+        display: block;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+    
+    .gitcard img{
+        width: 75%;
+        height: 250px;
+    }
+
+    .lang img{
+        width: 70%;
+    }
+    
+    .gitstats img{
+        width: 70%;
+    }
+
+}
+
+.contact-me{
+    margin-top: 100px;
+    text-align: center;
+}
+
+.contact-head{
+    margin: 50px 0px 30px 0px;
+    text-align: center;
+    font-size: 33px;
+    font-weight: 500;
+    text-decoration: underline rgb(243, 62, 62);
+    text-underline-offset: 0.5rem;
+    letter-spacing: 1px;
+}
+
+.con a{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.con a div img{
+    width: 35px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.con a div .link-child{
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+    margin-left: 25px;
+    letter-spacing: 1px;
+}
+
+.con a div img:hover{
+    background-color: blue;
+}
+
+.con a div p:hover{
+    color: blue;
+}
+
+#contact-us{
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.submit:hover{
+    background-color: blue;
+    color: #ffffff;
+}
+
+.credit{
+    text-align: center;
+    margin-bottom: 20px;
+}
